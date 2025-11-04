@@ -1,0 +1,15 @@
+{
+  "image": "samples/Happy.jpg",
+  "detections": [
+    {
+      "bbox_xyxy": [
+        766,
+        197,
+        1216,
+        843
+      ],
+      "age_estimate": 56,
+      "gender": "male"
+    }
+  ]
+}

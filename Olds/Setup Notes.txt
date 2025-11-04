@@ -1,0 +1,50 @@
+# Install these dependencies using pip
+python3 -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+
+pip install opencv-python
+pip install pytesseract
+
+sudo apt update
+sudo apt install tesseract-ocr -y
+sudo apt install libtesseract-dev -y
+sudo apt install imagemagick -y
+sudo apt install -y libgl1
+
+pip install fer
+
+chmod +x text2jpg.sh
+./text2jpg.sh "Hello from CodyNick!"
+
+python3 top.py "samples/hello.png"
+python3 emotion.py "samples/Happy.jpg"
+
+---Swap Memory (for OS with less than 2GB of RAM)---
+sudo fallocate -l 2G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+
+For making it permenant:
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+----------------------------------------------------------
+
+for Object detecvtion:
+pip install cvlib opencv-python
+
+--
+--------------------------------
+# Install versions that play nicely together
+pip install numpy==1.26.4 opencv-python==4.9.0.80
+pip install onnxruntime pillow pytesseract fer mtcnn matplotlib requests
+--------------------------------
+
+pip install onnx
+
+
+-------------- Rpi Zero 2 W -----------
+sudo apt install -y tesseract-ocr
+
+pip install numpy==1.26.4 opencv-python==4.9.0.80
+pip install onnxruntime pillow pytesseract fer mtcnn matplotlib requests
+sudo apt install -y libgl1

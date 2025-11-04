@@ -1,0 +1,50 @@
+numpy==1.26.4
+opencv-python==4.9.0.80
+onnxruntime
+pillow
+pytesseract
+fer
+mtcnn
+matplotlib
+requests
+
+
+sudo apt install -y libgl1
+sudo apt install -y tesseract-ocr
+pip install pytesseract
+
+tesseract --version
+
+
+python unified_vision_tools.py --task ocr --image samples/hello.png
+python unified_vision_tools.py --task emotion --image samples/Happy.jpg
+python unified_vision_tools.py --task objects --image samples/objects.jpg --model models/yolov8n.onnx --conf 0.6
+python unified_vision_tools.py --task age --image samples/Happy.jpg --age-backend deepface
+
+
+making swap space
+
+sudo apt update
+sudo apt install -y dphys-swapfile
+
+sudo nano /etc/dphys-swapfile
+          CONF_SWAPSIZE=2048
+
+sudo dphys-swapfile setup
+sudo dphys-swapfile swapon
+
+free -h 
+ (Should see 2GB or swap)
+ 
+ 
+pip install fer==22.5.0 mtcnn tensorflow==2.14.0 tf-keras
+pip install moviepy
+
+sudo apt install -y ffmpeg
+
+pip install --upgrade pip setuptools wheel
+pip install "moviepy==1.0.3" "imageio==2.34.0" "imageio-ffmpeg==0.4.9"
+
+
+-----
+pip install onnxruntime==1.18.0
