@@ -175,11 +175,11 @@ python unified_vision_tools_final_rpi7.py --task age --image samples/Happy.jpg
 # Emotion (DeepFace + MTCNN default)
 python unified_vision_tools_final_rpi7.py --task emotion --image samples/Happy.jpg
 
-# Emotion with RetinaFace (requires TF path from Stage 3C)
+# Emotion with RetinaFace (requires TF path from Stage 3C) -- Parameter NOT passed now
 python unified_vision_tools_final_rpi7.py --task emotion --image samples/Happy.jpg \
   --emotion-backend deepface-retinaface
 
-# Emotion with FER+ ONNX
+# Emotion with FER+ ONNX -- Parameter NOT passed now
 python unified_vision_tools_final_rpi7.py --task emotion --image samples/Happy.jpg \
   --emotion-backend onnx
 ```
