@@ -16,7 +16,7 @@ python3 --version
 
 ---
 
-# Stage 1 — System packages
+# Stage 1 — System packages (C)
 
 ```bash
 sudo apt update
@@ -30,12 +30,12 @@ sudo apt install -y \
 
 ---
 
-# Stage 2 — Project & virtualenv
+# Stage 2 — Project & virtualenv (C)
 
 ```bash
 # Clone your repo (or copy your script folder)
-git clone https://github.com/codynick/ai
-cd ai
+git clone https://github.com/codynick/ai-rpi
+cd ai-rpi
 
 # venv
 python3.12 -m venv venv
@@ -48,7 +48,7 @@ pip config set global.extra-index-url https://www.piwheels.org/simple
 
 ---
 
-# Stage 3 — Python dependencies
+# Stage 3 — Python dependencies (C)
 
 ## 3A) Core, CPU-friendly stack (OCR + YOLO + ONNX + OpenCV)
 
@@ -61,7 +61,7 @@ pip install --only-binary=:all: \
   onnxruntime==1.23.2
 ```
 
-## 3B) Age: **InsightFace** (CPU)
+## 3B) Age: **InsightFace** (CPU) (C)
 
 > InsightFace pulls its own model zoo and does age/gender with `FaceAnalysis` on CPU.
 
@@ -79,11 +79,11 @@ pip install --no-cache-dir --index-url https://pypi.org/simple \
 pip install deepface==0.0.93 mtcnn
 ```
 
-### Option 2 (no TF needed): **FER+ ONNX** path
+### Option 2 (no TF needed): **FER+ ONNX** path -- Don't Install This
 
 *(Already satisfied by onnxruntime; no extra pip needed)*
 
-### Option 3 (optional): **DeepFace + RetinaFace (TF path)**
+### Option 3 (optional): **DeepFace + RetinaFace (TF path)**-- Don't Install This
 
 If you want RetinaFace detector for emotion (sometimes better than MTCNN), add:
 
@@ -96,7 +96,7 @@ pip install tf-keras tensorflow==2.20.0
 
 ---
 
-# Stage 4 — Models directory & weights
+# Stage 4 — Models directory & weights (No need, Already dowloaded)
 
 ```bash
 mkdir -p models
